@@ -1,0 +1,20 @@
+#def main()
+    print("Bienvenue dans le jeu de combat de personnages!")
+    print("Choisissez votre personnage:")
+    print("1. Warrior")
+    print("2. Mage")
+    print("3. Thief")
+
+    choice = input("Entrez le numéro de votre choix: ")
+
+    if choice == "1":
+        selected_character = Warrior("Bernard", 20, 8, 3, Dice(6))
+    elif choice == "2":
+        selected_character = Mage("Jordan", 20, 8, 3, Dice(6))
+    elif choice == "3":
+        selected_character = Thief("Lucie", 20, 8, 3, Dice(6))
+    else:
+        print("Choix invalide. Sélectionnez un personnage valide.")
+        return
+
+    print(f"Vous avez choisi: {selected_character.get_name()}")
